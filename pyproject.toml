@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "whisper-precision"
+version = "0.1.0"
+description = "Measured weight-precision search and independent WER evaluation for Whisper Base"
+readme = "README.md"
+requires-python = ">=3.13,<3.14"
+dependencies = []
+
+[project.scripts]
+whisper-search = "whisper_precision.cli:main"
+whisper-prepare = "whisper_precision.prepare:main"
+whisper-verify = "whisper_precision.verify:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

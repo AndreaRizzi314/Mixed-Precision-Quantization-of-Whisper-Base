@@ -1,0 +1,28 @@
+{
+  "cpu": "Intel64 Family 6 Model 183 Stepping 1, GenuineIntel",
+  "cuda_available": false,
+  "cuda_gpu": null,
+  "logical_cpu_count": 20,
+  "model_id": "openai/whisper-base",
+  "model_revision": "e37978b90ca9030d5170a5c07aadb050351a65bb",
+  "nvidia_smi": "NVIDIA GeForce RTX 5070 Ti, 16303 MiB, 591.86",
+  "openvino_devices": [
+    "CPU",
+    "GPU"
+  ],
+  "os": "Windows-11-10.0.26200-SP0",
+  "packages": {
+    "datasets": "4.4.1",
+    "huggingface-hub": "0.36.2",
+    "matplotlib": "3.10.8",
+    "nncf": "3.4.0",
+    "numpy": "2.4.6",
+    "openvino": "2026.4.0",
+    "optimum-intel": "2.2.0",
+    "soundfile": "0.13.1",
+    "torch": "2.10.0",
+    "transformers": "4.57.6"
+  },
+  "python": "3.13.11",
+  "seed": 1052026
+}

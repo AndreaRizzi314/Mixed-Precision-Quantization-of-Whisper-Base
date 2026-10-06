@@ -1,0 +1,13 @@
+{
+  "files": {
+    "provenance/environment.json": "6d14315af6dc67c123366966f5f83871bfee064bef9edebf2fbf85d8768985e3",
+    "provenance/numerical_source.zip": "9d218eaaa58c08af8be78dd2ec612099716b4c201c4058cc6dc7645166b71f6e",
+    "provenance/selection.json": "d69436ed051c81d68894fc7f4f2adf76b9ad6a4b840e78ce51461f71e5834e49",
+    "raw/inputs.json.gz": "bf418a4975f01793535f64030631796c17ea9768984127f2bc8db7325ab98c4b",
+    "raw/measurements.json.gz": "99478e54c6854106e65c5b13292f941796c6604f94edbf3e8022779f15f840ce",
+    "tables/candidates.csv": "05af2f4e491fc42473c60550f306aeecb71511cd23f714c3e004adc80cb79dc8",
+    "tables/confirmation.csv": "261974212bc43cb43f9e89e500408bb0837d48bf9a091aaa5fb28a82fd2fcf47"
+  },
+  "format_version": 1,
+  "recorded_run": "artifacts/phase5"
+}

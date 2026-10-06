@@ -1,0 +1,54 @@
+{
+  "seed": 1052026,
+  "model_id": "openai/whisper-base",
+  "model_revision": "e37978b90ca9030d5170a5c07aadb050351a65bb",
+  "dataset_id": "openslr/librispeech_asr",
+  "dataset_revision": "71cacbfb7e2354c4226d01e70d77d5fca3d04ba1",
+  "source_root": "artifacts/source",
+  "output_dir": "artifacts/reproduction",
+  "development_manifests": [
+    "artifacts/lowbit/dev_manifest.json",
+    "artifacts/mixed4/test_manifest.json",
+    "artifacts/layerwise/test_manifest.json"
+  ],
+  "clean_exclusion_manifests": [
+    "artifacts/expanded/test_manifest.json",
+    "artifacts/lowbit/test_manifest.json",
+    "artifacts/mixed4/test_manifest.json"
+  ],
+  "other_exclusion_manifests": [
+    "artifacts/expanded/test_other_manifest.json",
+    "artifacts/lowbit/test_other_manifest.json"
+  ],
+  "test_a_targets": {
+    "short": 60,
+    "medium": 75,
+    "long": 15
+  },
+  "test_b_targets": {
+    "short": 60,
+    "medium": 78,
+    "long": 12
+  },
+  "diagnostic_other_targets": {
+    "short": 60,
+    "medium": 60
+  },
+  "family_limits": {
+    "ablation": 20,
+    "beam": 30,
+    "matrix": 18,
+    "quantizer": 16,
+    "lowbit": 12
+  },
+  "maximum_candidates": 96,
+  "maximum_bytes": 76430000,
+  "full_development_candidates": 16,
+  "relative_wer_tolerance": 0.05,
+  "selection_margin": 0.02,
+  "device": "cpu",
+  "max_new_tokens": 128,
+  "timing_repeats": 1,
+  "timing_benchmark_repeats": 3,
+  "noise_snr_db": 10
+}

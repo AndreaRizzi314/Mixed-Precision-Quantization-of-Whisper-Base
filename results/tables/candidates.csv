@@ -1,0 +1,97 @@
+candidate,family,saved_bytes,group_size,int4_mode,correction,int2_matrices,int3_matrices,int4_matrices,int8_matrices,screen_edits,screen_words,screen_wer,development_edits,development_words,development_wer,reason
+q_7b023f4e50536595,quantizer,55444347,64,INT4_SYM,none,0,0,96,0,179,2776,0.06448126801152737,400,6676,0.05991611743559017,quantizer refinement of q_fd46fb6587693458
+q_b1c495299bd91852,quantizer,55569121,64,INT4_SYM,none,0,0,95,1,179,2776,0.06448126801152737,,,,quantizer refinement of q_116e72aab7fd790c
+q_2d08fd725e8720f4,lowbit,55664576,64,INT4_ASYM,none,1,0,95,0,167,2776,0.06015850144092219,,,,isolated 2-bit probe from q_fd46fb6587693458: __module.model.decoder.layers.0.fc2/aten::linear/MatMul
+q_74d00f2da3f1055a,lowbit,55664576,64,INT4_ASYM,none,1,0,95,0,161,2776,0.057997118155619594,379,6676,0.05677052127022169,isolated 2-bit probe from q_fd46fb6587693458: __module.model.decoder.layers.1.fc2/aten::linear/MatMul
+q_1bab5f8efaf8716d,lowbit,55795648,64,INT4_ASYM,none,0,1,95,0,162,2776,0.058357348703170026,376,6676,0.05632115038945476,isolated 3-bit probe from q_fd46fb6587693458: __module.model.decoder.layers.0.fc2/aten::linear/MatMul
+q_24fbcd7846c76c54,lowbit,55795648,64,INT4_ASYM,none,0,1,95,0,162,2776,0.058357348703170026,397,6676,0.05946674655482325,isolated 3-bit probe from q_fd46fb6587693458: __module.model.decoder.layers.3.fc2/aten::linear/MatMul
+q_6c54717159fd5ab7,lowbit,55795648,64,INT4_ASYM,none,0,1,95,0,162,2776,0.058357348703170026,386,6676,0.05781905332534452,isolated 3-bit probe from q_fd46fb6587693458: __module.model.decoder.layers.1.fc2/aten::linear/MatMul
+q_8806c377b9b40ef4,lowbit,55867314,64,INT4_ASYM,none,1,0,95,0,158,2776,0.0569164265129683,385,6676,0.05766926303175554,isolated 2-bit probe from q_fd46fb6587693458: __module.model.decoder.layers.0.encoder_attn.out_proj/aten::linear/MatMul
+q_db144cefd8f35e88,lowbit,55867314,64,INT4_ASYM,none,1,0,95,0,164,2776,0.059077809798270896,,,,isolated 2-bit probe from q_fd46fb6587693458: __module.model.decoder.layers.1.encoder_attn.out_proj/aten::linear/MatMul
+q_73f0fd0bbdd5eeea,lowbit,55900082,64,INT4_ASYM,none,0,1,95,0,159,2776,0.05727665706051873,378,6676,0.05662073097663271,isolated 3-bit probe from q_fd46fb6587693458: __module.model.decoder.layers.1.encoder_attn.out_proj/aten::linear/MatMul
+q_7edf4d4565d7672b,lowbit,55900082,64,INT4_ASYM,none,0,1,95,0,165,2776,0.05943804034582133,,,,isolated 3-bit probe from q_fd46fb6587693458: __module.model.decoder.layers.2.encoder_attn.out_proj/aten::linear/MatMul
+q_bab4c305a7306e26,lowbit,55900082,64,INT4_ASYM,none,0,1,95,0,163,2776,0.058717579250720464,,,,isolated 3-bit probe from q_fd46fb6587693458: __module.model.decoder.layers.0.encoder_attn.out_proj/aten::linear/MatMul
+q_2997c8dd9255f83e,lowbit,55900085,64,INT4_ASYM,none,0,1,95,0,164,2776,0.059077809798270896,,,,isolated 3-bit probe from q_fd46fb6587693458: __module.model.decoder.layers.1.self_attn.out_proj/aten::linear/MatMul
+q_5f1f086f4121fabe,lowbit,55900085,64,INT4_ASYM,none,0,1,95,0,161,2776,0.057997118155619594,385,6676,0.05766926303175554,isolated 3-bit probe from q_fd46fb6587693458: __module.model.decoder.layers.2.self_attn.out_proj/aten::linear/MatMul
+q_40f4bb75b6694333,quantizer,55935164,64,INT4_ASYM,gptq,0,0,96,0,169,2776,0.060878962536023054,,,,quantizer refinement of q_fd46fb6587693458
+q_fd46fb6587693458,beam,55935164,64,INT4_ASYM,none,0,0,96,0,161,2776,0.057997118155619594,386,6676,0.05781905332534452,beam_target_57mb
+q_116e72aab7fd790c,matrix,56056372,64,INT4_ASYM,none,0,0,95,1,159,2776,0.05727665706051873,378,6676,0.05662073097663271,single_matrix_flip from q_fd46fb6587693458: __module.model.decoder.layers.3.encoder_attn.q_proj/aten::linear/MatMul
+q_31cb47506f48c924,quantizer,56056372,64,INT4_ASYM,gptq,0,0,95,1,165,2776,0.05943804034582133,,,,quantizer refinement of q_116e72aab7fd790c
+q_34ea856d4cf8d68e,matrix,56056372,64,INT4_ASYM,none,0,0,95,1,160,2776,0.05763688760806916,380,6676,0.056920311563810666,single_matrix_flip from q_fd46fb6587693458: __module.model.decoder.layers.2.encoder_attn.q_proj/aten::linear/MatMul
+q_6d8a463109d4854c,matrix,56056372,64,INT4_ASYM,none,0,0,95,1,163,2776,0.058717579250720464,,,,single_matrix_flip from q_fd46fb6587693458: __module.model.decoder.layers.4.encoder_attn.q_proj/aten::linear/MatMul
+q_ef6b23492501cbdd,matrix,56056372,64,INT4_ASYM,none,0,0,95,1,161,2776,0.057997118155619594,375,6676,0.05617136009586579,single_matrix_flip from q_fd46fb6587693458: __module.model.decoder.layers.5.encoder_attn.v_proj/aten::linear/MatMul
+q_a5186038df2a3151,matrix,56423510,64,INT4_ASYM,none,0,0,95,1,163,2776,0.058717579250720464,,,,single_matrix_flip from q_fd46fb6587693458: __module.layers.4.fc1/aten::linear/MatMul
+q_f1823100d7addea1,matrix,56423510,64,INT4_ASYM,none,0,0,95,1,166,2776,0.05979827089337176,,,,single_matrix_flip from q_fd46fb6587693458: __module.layers.5.fc1/aten::linear/MatMul
+q_6b67b74cb28f803d,matrix,56541310,64,INT4_ASYM,none,0,0,91,5,160,2776,0.05763688760806916,381,6676,0.05707010185739964,single_matrix_flip from q_4516403cd19a3c4b: __module.layers.3.self_attn.out_proj/aten::linear/MatMul
+q_be1571dc67f52727,matrix,56541310,64,INT4_ASYM,none,0,0,91,5,160,2776,0.05763688760806916,375,6676,0.05617136009586579,single_matrix_flip from q_4516403cd19a3c4b: __module.layers.2.self_attn.out_proj/aten::linear/MatMul
+q_dc07aa2e390509b0,matrix,56541310,64,INT4_ASYM,none,0,0,91,5,160,2776,0.05763688760806916,,,,single_matrix_flip from q_4516403cd19a3c4b: __module.layers.1.self_attn.out_proj/aten::linear/MatMul
+q_aaffb531cc4331ca,ablation,56661591,64,INT4_ASYM,none,0,0,90,6,166,2776,0.05979827089337176,,,,rescue_decoder_cross_output
+q_f9d404ef23d75d0c,ablation,56662035,64,INT4_ASYM,none,0,0,90,6,160,2776,0.05763688760806916,,,,rescue_decoder_self_output
+q_4516403cd19a3c4b,ablation,56662156,64,INT4_ASYM,none,0,0,90,6,158,2776,0.0569164265129683,,,,rescue_encoder_attention_output
+q_f2d3fbb3942c553e,matrix,56783746,64,INT4_ASYM,none,0,0,89,7,160,2776,0.05763688760806916,,,,single_matrix_flip from q_4516403cd19a3c4b: __module.model.decoder.layers.3.encoder_attn.q_proj/aten::linear/MatMul
+q_8f64353ff855b1c0,quantizer,56941505,64,INT4_SYM,none,0,0,84,12,156,2776,0.056195965417867436,380,6676,0.056920311563810666,quantizer refinement of q_b7ae3c464b1f0b44
+q_9933d987bb7f7fef,matrix,57150884,64,INT4_ASYM,none,0,0,89,7,169,2776,0.060878962536023054,,,,single_matrix_flip from q_4516403cd19a3c4b: __module.layers.4.fc1/aten::linear/MatMul
+q_d33f59e51a9acc79,matrix,57150884,64,INT4_ASYM,none,0,0,89,7,164,2776,0.059077809798270896,,,,single_matrix_flip from q_4516403cd19a3c4b: __module.layers.5.fc1/aten::linear/MatMul
+q_12ea6e9d232c5dd9,beam,57388957,64,INT4_ASYM,none,0,0,84,12,162,2776,0.058357348703170026,,,,beam_target_57mb
+q_b5cac3fa1ad22781,beam,57389277,64,INT4_ASYM,none,0,0,84,12,165,2776,0.05943804034582133,,,,beam_target_57mb
+q_b7ae3c464b1f0b44,beam,57389421,64,INT4_ASYM,none,0,0,84,12,156,2776,0.056195965417867436,,,,beam_target_57mb
+q_435c6143d18205d1,quantizer,57389791,64,INT4_ASYM,gptq,0,0,84,12,170,2776,0.061239193083573486,,,,quantizer refinement of q_b7ae3c464b1f0b44
+q_55d8eff09c7af68d,quantizer,57665996,32,INT4_ASYM,none,0,0,96,0,167,2776,0.06015850144092219,,,,quantizer refinement of q_fd46fb6587693458
+q_ee4acc8a4b64cbc0,quantizer,57776946,32,INT4_ASYM,none,0,0,95,1,167,2776,0.06015850144092219,,,,quantizer refinement of q_116e72aab7fd790c
+q_141a3738c5d1f5f3,ablation,58116353,64,INT4_ASYM,none,0,0,78,18,160,2776,0.05763688760806916,,,,rescue_decoder_cross_qkv
+q_34b5defe6d499d71,ablation,58116596,64,INT4_ASYM,none,0,0,78,18,164,2776,0.059077809798270896,,,,rescue_decoder_self_qkv
+q_dcbcf39fcbe4a918,ablation,58116968,64,INT4_ASYM,none,0,0,78,18,166,2776,0.05979827089337176,,,,rescue_encoder_attention_qkv
+q_cfa7c03e6b612f24,beam,58117021,64,INT4_ASYM,none,0,0,78,18,161,2776,0.057997118155619594,,,,beam_target_57mb
+q_bfa55f4b8d04fddd,ablation,58837013,64,INT4_ASYM,none,0,0,90,6,167,2776,0.06015850144092219,,,,rescue_decoder_ffn_contract
+q_613e50eed3200cbf,ablation,58837163,64,INT4_ASYM,none,0,0,90,6,162,2776,0.058357348703170026,,,,rescue_encoder_ffn_contract
+q_5743dfcb95f3cebf,ablation,58864479,64,INT4_ASYM,none,0,0,90,6,168,2776,0.06051873198847262,,,,rescue_encoder_ffn_expand
+q_86718f593fbc7e80,ablation,58864715,64,INT4_ASYM,none,0,0,90,6,160,2776,0.05763688760806916,,,,rescue_decoder_ffn_expand
+q_05fadc332947fd98,quantizer,58997530,32,INT4_ASYM,none,0,0,84,12,162,2776,0.058357348703170026,,,,quantizer refinement of q_b7ae3c464b1f0b44
+q_5df1dd1a88e282bf,beam,60291790,64,INT4_ASYM,none,0,0,78,18,164,2776,0.059077809798270896,,,,beam_target_60mb
+q_d15c5347221ea6ab,beam,60291808,64,INT4_ASYM,none,0,0,78,18,162,2776,0.058357348703170026,,,,beam_target_60mb
+q_ab1dc84b23665a93,beam,60291999,64,INT4_ASYM,none,0,0,78,18,161,2776,0.057997118155619594,,,,beam_target_60mb
+q_9a624d32a8e931f2,beam,60298811,64,INT4_ASYM,none,0,0,60,36,165,2776,0.05943804034582133,,,,beam_target_60mb
+q_45556f981ed767bf,beam,60299164,64,INT4_ASYM,none,0,0,60,36,162,2776,0.058357348703170026,,,,beam_target_60mb
+q_bc63611412c2a422,quantizer,61124803,16,INT4_ASYM,none,0,0,96,0,161,2776,0.057997118155619594,,,,quantizer refinement of q_fd46fb6587693458
+q_53843b056c9b2d6c,quantizer,61215273,16,INT4_ASYM,none,0,0,95,1,161,2776,0.057997118155619594,,,,quantizer refinement of q_116e72aab7fd790c
+q_2cf4169fc8966b41,quantizer,62210568,16,INT4_ASYM,none,0,0,84,12,162,2776,0.058357348703170026,,,,quantizer refinement of q_b7ae3c464b1f0b44
+q_269b66dc276bab12,beam,63194374,64,INT4_ASYM,none,0,0,72,24,166,2776,0.05979827089337176,,,,beam_target_63mb
+q_e8ef04bf87aa78d8,beam,63201191,64,INT4_ASYM,none,0,0,54,42,168,2776,0.06051873198847262,,,,beam_target_63mb
+q_22feec281fc5a104,beam,63201484,64,INT4_ASYM,none,0,0,54,42,171,2776,0.06159942363112392,,,,beam_target_63mb
+q_442f2feac823c83f,beam,63221642,64,INT4_ASYM,none,0,0,72,24,162,2776,0.058357348703170026,,,,beam_target_63mb
+q_e606dd0575534d2f,beam,63221876,64,INT4_ASYM,none,0,0,72,24,162,2776,0.058357348703170026,,,,beam_target_63mb
+q_f6d27f95ae6a7860,beam,66103734,64,INT4_ASYM,none,0,0,48,48,167,2776,0.06015850144092219,,,,beam_target_66mb
+q_3191c1401922cc36,beam,66103764,64,INT4_ASYM,none,0,0,48,48,166,2776,0.05979827089337176,,,,beam_target_66mb
+q_4c6cf8b4b583211a,beam,66110353,64,INT4_ASYM,none,0,0,30,66,165,2776,0.05943804034582133,,,,beam_target_66mb
+q_ee4c38c0f9ab1f9e,beam,66131263,64,INT4_ASYM,none,0,0,48,48,159,2776,0.05727665706051873,,,,beam_target_66mb
+q_b9a1ba2066a3fde4,beam,66131280,64,INT4_ASYM,none,0,0,48,48,160,2776,0.05763688760806916,,,,beam_target_66mb
+q_b569338dfb1793ee,beam,69012847,64,INT4_ASYM,none,0,0,24,72,159,2776,0.05727665706051873,,,,beam_target_69mb
+q_813cfe5b50521368,beam,69033506,64,INT4_ASYM,none,0,0,42,54,172,2776,0.06195965417867435,,,,beam_target_69mb
+q_4865080bb73e8f70,beam,69033525,64,INT4_ASYM,none,0,0,42,54,161,2776,0.057997118155619594,,,,beam_target_69mb
+q_00150f83540e0882,beam,69033649,64,INT4_ASYM,none,0,0,42,54,162,2776,0.058357348703170026,,,,beam_target_69mb
+q_7edba90b3187e045,beam,69040428,64,INT4_ASYM,none,0,0,24,72,165,2776,0.05943804034582133,,,,beam_target_69mb
+q_a52a056824dcf9da,quantizer,71339342,64,INT4_SYM,none,0,0,37,59,163,2776,0.058717579250720464,,,,quantizer refinement of q_47a64f6af565e1c7
+q_47a64f6af565e1c7,matrix,71479646,64,INT4_ASYM,none,0,0,37,59,148,2776,0.053314121037463975,360,6676,0.05392450569203116,single_matrix_flip from q_5f361acead5aff21: __module.model.decoder.layers.0.fc2/aten::linear/MatMul
+q_9de140a7dcd46f8e,matrix,71479646,64,INT4_ASYM,none,0,0,37,59,151,2776,0.05439481268011527,,,,single_matrix_flip from q_5f361acead5aff21: __module.model.decoder.layers.3.fc2/aten::linear/MatMul
+q_a17293743f872339,quantizer,71479646,64,INT4_ASYM,gptq,0,0,37,59,158,2776,0.0569164265129683,,,,quantizer refinement of q_47a64f6af565e1c7
+q_e4d5de0b2bca2daf,matrix,71479646,64,INT4_ASYM,none,0,0,37,59,151,2776,0.05439481268011527,,,,single_matrix_flip from q_5f361acead5aff21: __module.model.decoder.layers.1.fc2/aten::linear/MatMul
+q_5cea5e6865cf6e6f,quantizer,71898879,32,INT4_ASYM,none,0,0,37,59,159,2776,0.05727665706051873,,,,quantizer refinement of q_47a64f6af565e1c7
+q_9683d61dd03fb20f,beam,71942648,64,INT4_ASYM,none,0,0,18,78,157,2776,0.05655619596541787,,,,beam_target_72mb
+q_5f361acead5aff21,beam,71963338,64,INT4_ASYM,none,0,0,36,60,152,2776,0.05475504322766571,,,,beam_target_72mb
+q_101db17871c9908b,beam,71963429,64,INT4_ASYM,none,0,0,36,60,163,2776,0.058717579250720464,,,,beam_target_72mb
+q_e80889018b25cd27,beam,71970242,64,INT4_ASYM,none,0,0,18,78,160,2776,0.05763688760806916,,,,beam_target_72mb
+q_6805a01837077053,beam,71970272,64,INT4_ASYM,none,0,0,18,78,158,2776,0.0569164265129683,,,,beam_target_72mb
+q_55c3f7b80d46e90c,matrix,72084568,64,INT4_ASYM,none,0,0,35,61,148,2776,0.053314121037463975,,,,single_matrix_flip from q_5f361acead5aff21: __module.layers.5.self_attn.k_proj/aten::linear/MatMul
+q_b0fe465788c53ebd,matrix,72084568,64,INT4_ASYM,none,0,0,35,61,155,2776,0.055835734870317004,,,,single_matrix_flip from q_5f361acead5aff21: __module.layers.5.self_attn.v_proj/aten::linear/MatMul
+q_e35a16aaee6bd1c6,matrix,72084568,64,INT4_ASYM,none,0,0,35,61,148,2776,0.053314121037463975,,,,single_matrix_flip from q_5f361acead5aff21: __module.layers.5.self_attn.q_proj/aten::linear/MatMul
+q_7c697aa8b4cadf7e,quantizer,72736021,16,INT4_ASYM,none,0,0,37,59,164,2776,0.059077809798270896,,,,quantizer refinement of q_47a64f6af565e1c7
+q_566454613fb7f159,ablation,73397120,64,INT4_ASYM,none,0,0,6,90,163,2776,0.058717579250720464,,,,downgrade_decoder_ffn_expand
+q_2255bfc975df9417,ablation,73424822,64,INT4_ASYM,none,0,0,6,90,159,2776,0.05727665706051873,,,,downgrade_decoder_ffn_contract
+q_85c10b2a842f78cf,ablation,73502951,64,INT4_ASYM,none,0,0,6,90,154,2776,0.05547550432276657,,,,downgrade_encoder_ffn_expand
+q_7d094a751b3e2fe1,ablation,73530653,64,INT4_ASYM,none,0,0,6,90,156,2776,0.056195965417867436,,,,downgrade_encoder_ffn_contract
+q_69991d26d4c3f4fd,ablation,74145120,64,INT4_ASYM,none,0,0,18,78,158,2776,0.0569164265129683,,,,downgrade_decoder_cross_qkv
+q_2a68ffb63106c726,ablation,74145287,64,INT4_ASYM,none,0,0,18,78,153,2776,0.05511527377521614,,,,downgrade_decoder_self_qkv
+q_20bd79a114145ba1,ablation,74250865,64,INT4_ASYM,none,0,0,18,78,157,2776,0.05655619596541787,,,,downgrade_encoder_attention_qkv
+q_c055342ac9266651,ablation,75599610,64,INT4_ASYM,none,0,0,6,90,156,2776,0.056195965417867436,,,,downgrade_decoder_cross_output
+q_7dd2d411598c6f66,ablation,75599828,64,INT4_ASYM,none,0,0,6,90,152,2776,0.05475504322766571,,,,downgrade_decoder_self_output
+q_d55c63a21861ea94,ablation,75705673,64,INT4_ASYM,none,0,0,6,90,155,2776,0.055835734870317004,,,,downgrade_encoder_attention_output

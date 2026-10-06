@@ -1,0 +1,6 @@
+* text=auto eol=lf
+
+# Recorded evidence is checksummed byte-for-byte; preserve it on every platform.
+results/** -text -eol whitespace=cr-at-eol
+*.gz binary
+*.zip binary

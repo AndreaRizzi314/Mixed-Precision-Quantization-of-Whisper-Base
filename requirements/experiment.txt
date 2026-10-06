@@ -1,0 +1,10 @@
+torch==2.10.0
+transformers==4.57.6
+datasets==4.4.1
+soundfile==0.13.1
+numpy==2.4.6
+scipy==1.18.1
+optimum-intel[openvino]==2.2.0
+optimum==2.3.0
+nncf==3.4.0
+openvino==2026.4.0
