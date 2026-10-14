@@ -1,41 +1,39 @@
 # Whisper Base quantization
 
 How small can a saved Whisper Base model become while keeping its word error
-rate within 5% of the original model?
+rate within 5% of the base model?
 
-I tested 8-, 4-, 3-, and 2-bit weight precision, then searched for allocations
+I tested 8, 4, 3, and 2-bit weight precision, then searched for allocations
 that give different parts of the same model different precision. The final
 search exported and evaluated 96 models. **INT8 at 76.43 MB was the smallest
-validated result.** A 55.66 MB candidate passed development and the first
-independent test, but failed the second.
+validated result.**
 
-## Hypothesis
+## Approach
 
-Some attention and feed-forward matrices might tolerate low precision while
+Some attention and feed forward matrices might tolerate low precision while
 others need 8 bits. Allocating precision selectively could therefore save more
 space than uniform INT8 without materially increasing transcription errors.
 
 The checkpoint stayed fixed: `openai/whisper-base`. This was post-training,
-**weight-only** compression using OpenVINO and NNCF, with no fine-tuning, pruning,
-or smaller architecture. Packed weights do not imply equally low-bit activations
-or CPU arithmetic. FP32 names the stored baseline weights; execution used the
+weight only compression using OpenVINO and NNCF, with no fine tuning, pruning,
+or smaller architecture. Packed weights do not imply equally low bit activations
+or CPU arithmetic. Execution used the
 OpenVINO runtime defaults.
 
 The objective was minimum saved size, subject to `WER <= 1.05 × FP32 WER` on
-**each** independent clean set. A 5.00% baseline allows 5.25%, not 10.00%.
+each independent clean set.
 Sizes sum saved model files, including graphs and quantization parameters but
-excluding the experiment's separate `variant.json` record. MB is decimal;
-displayed sizes are rounded.
+excluding the experiment's separate `variant.json` record. 
 
 ## How I searched
 
 Early INT8 allocations produced similar scores, so I moved below 8 bits.
 Uniform 2-bit compression severely damaged transcription. Earlier 4-bit and
-gradient-guided allocations looked better on development than on new clips.
+gradient guided allocations looked better on development than on new clips.
 That motivated a search driven by measured word errors, with sensitivity
 proxies used only to choose the next experiment.
 
-The final search varied 96 attention/feed-forward matrices. The two convolutions,
+The final search varied 96 attention/feed forward matrices. The two convolutions,
 token embedding, and output projection stayed INT8 to focus the search on the
 transformer matrices. This restriction was not proof that those operations
 must always stay at 8 bits.
@@ -44,17 +42,16 @@ must always stay at 8 bits.
 |---|---:|---|
 | Component ablations | 20 | Flip each of ten groups between 4 and 8 bits from opposite anchors, measuring both compression damage and the benefit of restoring precision. |
 | Component allocations | 30 | Fit a regularized WER regression with pairwise group interactions. Rank all 1,024 possible group masks cheaply, propose six size targets from 57–72 MB, export them, and refit after each batch. Swaps let precision move between groups. |
-| Individual matrix flips | 18 | Refine three promising allocations. Rank changes by activation-weighted reconstruction error per estimated byte, then measure actual WER. |
+| Individual matrix flips | 18 | Refine three promising allocations. Rank changes by activation weighted reconstruction error per estimated byte, then measure actual WER. |
 | Quantizer variants | 16 | Compare group sizes 16/32/64, symmetric/asymmetric INT4, and supported calibration corrections. Smaller groups cost more scale storage but may reduce rounding error. |
-| Isolated low-bit probes | 12 | Lower selected matrices to 3 or 2 bits, instead of lowering an entire stage. |
+| Isolated low bit probes | 12 | Lower selected matrices to 3 or 2 bits, instead of lowering an entire stage. |
 
 The reconstruction proxy was `sum((W_quantized − W)² × 2 E[x²])`, using two
 development clips. This approximates a diagonal Hessian of local output
-reconstruction, **not** the task-loss Hessian or the full
-[HAWQ-V2 algorithm](https://arxiv.org/abs/1911.03852). The component regression
-guided limited exports; it did not establish a global optimum.
+reconstruction, not the task loss Hessian or the full
+[HAWQ-V2 algorithm](https://arxiv.org/abs/1911.03852). 
 
-NNCF performed quantization and packing. The project-specific work was the graph
+NNCF performed quantization and packing. The project specific work was the graph
 inventory, allocation search, export verification, and evaluation. For graphs
 containing both INT2 and INT3, NNCF could not process an already packed low-bit
 graph. I generated the two branches from the same 4/8-bit graph and replaced
